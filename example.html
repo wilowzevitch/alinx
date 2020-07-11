@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>alinx.js</title>
+</head>
+<body>
+	<h1>alinx.js</h1>
+	<hr />
+	<div class="container">
+		<a href="realURL" class="alinx" data-url="https://www.freshcore.fr/ajax/getUnivers?univers=2">Link N°1</a>
+		<a href="realURL" class="alinx" data-url="ajax-url">Link N°2</a>
+		<a href="realURL" class="alinx" data-url="ajax-url">Link N°3</a>
+	</div>
+	<div class="container">
+		<fieldset>
+			<legend>Result</legend>
+			<div id="ajax-content"></div>
+		</fieldset>
+	</div>
+
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="alinx.js"></script>
+	<script type="text/javascript">
+		new Alinx('.alinx', {
+			loader: {src:'https://www.freshcore.fr/static/images/LOADER-FRESHCORE.gif'},
+		});
+	</script>
+</body>
+</html>
