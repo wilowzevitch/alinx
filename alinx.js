@@ -23,9 +23,9 @@ function Alinx(node, options) {
         $(document).on('click', node, function(e) {
             e.preventDefault();
             var item = $(this);
-            var output = item.data('output') || '#ajax-content';
+            item.output = item.data('output') || '#ajax-content';
             if (obj.options.loader) {
-                $(output).html(obj.options.loader);
+                $(item.output).html(obj.options.loader);
             }
             var url = item.data('url');
             $.ajax(url)
@@ -44,7 +44,7 @@ function Alinx(node, options) {
                                 $('meta[name=keywords]').attr('content', r.meta.keywords);
                             }                            
                         }
-                        $(output).html(r.html);
+                        $(item.output).html(r.html);
                         if (obj.options.complete && typeof obj.options.complete == 'function')
                             obj.options.complete(r, item);
                     } else {
